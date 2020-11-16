@@ -12,12 +12,24 @@ end majority4_top;
 
 architecture majority4_top of majority4_top is
 -- add the component statement here for the majority4 entity
-  
-  a <= sw(0)
-begin
+component majority4 is
+  Port( a : in STD_LOGIC;
+  b : in STD_LOGIC;
+  c : in STD_LOGIC;
+  d : in STD_LOGIC;
+  m : out STD_LOGIC  );
+end component;
 
+begin
 -- map the the wires from the board to the majority 4 compoment as
 -- described in the lab instructions
+m1 : majority4 Port Map (
+  a <= SW(3),
+  b <= SW(2),
+  c <= SW(1),
+  d <= SW(0),
+  m <= LED(0)
+);
 
 ----------------------Leave this untouched------------------------------
 -- Turn off the 7-segment LEDs

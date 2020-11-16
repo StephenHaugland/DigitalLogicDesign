@@ -19,10 +19,10 @@ component majority4 is
 end component;
 
 -- define signal wires to drive the inputs of our majority4 module
-signal sim_a : STD_LOGIC := 0;
-signal sim_b : STD_LOGIC := 0;
-signal sim_c : STD_LOGIC := 0;
-signal sim_d : STD_LOGIC := 0;
+signal sim_a : STD_LOGIC;
+signal sim_b : STD_LOGIC;
+signal sim_c : STD_LOGIC;
+signal sim_d : STD_LOGIC;
 
 
 -- define a signal wire for the output of our majority4 module
@@ -44,46 +44,46 @@ process begin
     -- drive the input wires here 
     -- assert statement to check the outputs
     -- 0000 -> 0
-    sim_a <= "0"; sim_b <= "0"; sim_c <= "0"; sim_d = "0"; wait for 10 ns;
+    sim_a <= '0'; sim_b <= '0'; sim_c <= '0'; sim_d = '0'; wait for 10 ns;
     assert sim_m = '0' report "0 0 0 0 failed for m";
     -- 0001 -> 0
-    sim_a <= "0"; sim_b <= "0"; sim_c <= "0"; sim_d = "1"; wait for 10 ns;
+    sim_a <= '0'; sim_b <= '0'; sim_c <= '0'; sim_d = '1'; wait for 10 ns;
     assert sim_m = '0' report "0 0 0 1 failed for m";
     -- 0010 -> 0
-    sim_a <= "0"; sim_b <= "0"; sim_c <= "1"; sim_d = "0"; wait for 10 ns;
+    sim_a <= '0'; sim_b <= '0'; sim_c <= '1'; sim_d = '0'; wait for 10 ns;
     assert sim_m = '0' report "0 0 1 0 failed for m";
     -- 0011 -> 0
-    sim_a <= "0"; sim_b <= "0"; sim_c <= "1"; sim_d = "1"; wait for 10 ns;
+    sim_a <= '0'; sim_b <= '0'; sim_c <= '1'; sim_d = '1'; wait for 10 ns;
     assert sim_m = '0' report "0 0 1 1 failed for m";
     -- 0100 -> 0
-    sim_a <= "0"; sim_b <= "1"; sim_c <= "0"; sim_d = "0"; wait for 10 ns;
+    sim_a <= '0'; sim_b <= '1'; sim_c <= '0'; sim_d = '0'; wait for 10 ns;
     assert sim_m = '0' report "0 1 0 0 failed for m";
     -- 0101 -> 0
-    sim_a <= "0"; sim_b <= "1"; sim_c <= "0"; sim_d = "1"; wait for 10 ns;
+    sim_a <= '0'; sim_b <= '1'; sim_c <= '0'; sim_d = '1'; wait for 10 ns;
     assert sim_m = '0' report "0 1 0 1 failed for m";
     -- 0111 -> 1
-    sim_a <= "0"; sim_b <= "1"; sim_c <= "1"; sim_d = "1"; wait for 10 ns;
+    sim_a <= '0'; sim_b <= '1'; sim_c <= '1'; sim_d = '1'; wait for 10 ns;
     assert sim_m = '1' report "0 1 1 1 failed for m";
     -- 1000 -> 0
-    sim_a <= "1"; sim_b <= "0"; sim_c <= "0"; sim_d = "0"; wait for 10 ns;
+    sim_a <= '1'; sim_b <= '0'; sim_c <= '0'; sim_d = '0'; wait for 10 ns;
     assert sim_m = '0' report "1 0 0 0 failed for m";
     -- 1001 -> 0
-    sim_a <= "1"; sim_b <= "0"; sim_c <= "0"; sim_d = "1"; wait for 10 ns;
+    sim_a <= '1'; sim_b <= '0'; sim_c <= '0'; sim_d = '1'; wait for 10 ns;
     assert sim_m = '0' report "1 0 0 1 failed for m";
     -- 1011 -> 1
-    sim_a <= "1"; sim_b <= "0"; sim_c <= "1"; sim_d = "1"; wait for 10 ns;
+    sim_a <= '1'; sim_b <= '0'; sim_c <= '1'; sim_d = '1'; wait for 10 ns;
     assert sim_m = '1' report "1 0 1 1 failed for m";
     -- 1100 -> 0
-    sim_a <= "1"; sim_b <= "1"; sim_c <= "0"; sim_d = "0"; wait for 10 ns;
+    sim_a <= '1'; sim_b <= '1'; sim_c <= '0'; sim_d = '0'; wait for 10 ns;
     assert sim_m = '0' report "1 1 0 0 failed for m";
     -- 1101 -> 1
-    sim_a <= "1"; sim_b <= "1"; sim_c <= "0"; sim_d = "1"; wait for 10 ns;
+    sim_a <= '1'; sim_b <= '1'; sim_c <= '0'; sim_d = '1'; wait for 10 ns;
     assert sim_m = '1' report "1 1 0 1 failed for m";
     -- 1110 -> 1
-    sim_a <= "1"; sim_b <= "1"; sim_c <= "1"; sim_d = "0"; wait for 10 ns;
+    sim_a <= '1'; sim_b <= '1'; sim_c <= '1'; sim_d = '0'; wait for 10 ns;
     assert sim_m = '1' report "1 1 1 0 failed for m";
     -- 1111 -> 1
-    sim_a <= "1"; sim_b <= "1"; sim_c <= "1"; sim_d = "1"; wait for 10 ns;
+    sim_a <= '1'; sim_b <= '1'; sim_c <= '1'; sim_d = '1'; wait for 10 ns;
     assert sim_m = '1' report "1 1 1 1 failed for m";
 
 end process;
