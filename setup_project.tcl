@@ -26,7 +26,7 @@ set topLevelTestbenchModuleName "sim_majority4"
 set simulationTestbench "./sim_testbench/sim_majority4.vhd"
 
 # flag to generate bitstream. Set to true if you want to program the board
-set generateBitStream "false"
+set generateBitStream "true"
 
 # Set this to the FPGA part name - (it is already set to the BASYS 3 FPGA part )
 set fpgaPart "xc7a35tcpg236-1"
