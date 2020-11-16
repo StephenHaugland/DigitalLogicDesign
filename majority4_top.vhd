@@ -13,17 +13,18 @@ end majority4_top;
 architecture majority4_top of majority4_top is
 -- add the component statement here for the majority4 entity
 component majority4 is
+  -- defining 4 single bit inputs and 1 single bit output
   Port( a : in STD_LOGIC;
   b : in STD_LOGIC;
   c : in STD_LOGIC;
   d : in STD_LOGIC;
-  m : out STD_LOGIC  );
+  m : out STD_LOGIC );
 end component;
 
 begin
--- map the the wires from the board to the majority 4 compoment as
--- described in the lab instructions
-m1 : majority4 Port Map (
+-- map the the wires from the board to the majority 4 compoment as described in the lab instructions
+-- hooking up inputs to board switches, and output to board led
+m1 : majority4 port map (
   a <= SW(3),
   b <= SW(2),
   c <= SW(1),

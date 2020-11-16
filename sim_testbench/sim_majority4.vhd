@@ -10,6 +10,7 @@ end sim_majority4;
 
 architecture Behavioral of sim_majority4 is
 -- declare the majority4 component here
+-- defining 4 single bit inputs and 1 single bit output
 component majority4 is
     Port( a : in STD_LOGIC;
     b : in STD_LOGIC;
@@ -31,8 +32,8 @@ signal sim_m: STD_LOGIC;
 
 begin
 -- Define a majority4 hardware object and connect its inputs to our simulation signals
-sim_unit : majority4 Port Map ( 
-        -- map the inputs / ouptut here
+sim_unit : majority4 port map ( 
+        -- map the inputs / output here
         a => sim_a,
         b => sim_b,
         c => sim_c,

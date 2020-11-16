@@ -18,6 +18,6 @@ end majority4;
 architecture majority4 of majority4 is
 begin
 -- complete the behavioral code for this module
--- Boolean logic equation derived from k-map 
-    m <= ((b and c and d) or (a and c and d) or (a and b and c) or (a and b and d));        
+-- Boolean logic equation derived from k-map simplification
+    m <= (b and c and d) or (a and c and d) or (a and b and c) or (a and b and d);        
 end majority4;
